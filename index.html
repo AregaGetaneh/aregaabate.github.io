@@ -54,24 +54,18 @@
             text-align: center;
         }
         .contact-info {
-            float: left;
-            width: 35%;
+            display: flex;
+            align-items: flex-start;
             padding: 20px;
             text-align: left;
         }
         .contact-info img {
-            width: 100%;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            margin-right: 20px;
         }
         .main-content {
-            float: left;
-            width: 65%;
-            padding: 20px;
-            text-align: left;
-        }
-        .home-text {
-            clear: both;
-            padding-top: 20px;
             text-align: left;
             font-size: 16px;
             line-height: 1.6;
@@ -80,11 +74,6 @@
         }
         .home-text p {
             margin-bottom: 1.5em;
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
         }
     </style>
 </head>
@@ -100,21 +89,23 @@
         <a onclick="showSection('research')">Research Interests</a>
     </nav>
     <section id="home" class="active">
-        <div class="content clearfix">
+        <div class="content">
             <div class="contact-info">
                 <img src="https://raw.githubusercontent.com/AregaGetaneh/aregaabate.github.io/main/Arega_photo.jpg" alt="Arega Abate's Photo">
-                <p><strong>E-mail:</strong> <a href="mailto:ageab@dtu.dk">ageab@dtu.dk</a></p>
-                <p><strong>Phone:</strong> +45 71786151</p>
-                <p>Technical University of Denmark, Elektrovej, Building 325, room 142, Kgs. Lyngby 2800, Denmark</p>
-                <p><strong>Links:</strong> 
-                    <a href="https://www.linkedin.com/in/arega-getaneh/" target="_blank">LinkedIn</a> | 
-                    <a href="https://x.com/agayh21" target="_blank">Twitter</a> | 
-                    <a href="https://orbit.dtu.dk/en/persons/arega-getaneh-abate" target="_blank">DTU Webpage</a> | 
-                    <a href="https://scholar.google.com/citations?hl=en&user=9Unlup4AAAAJ" target="_blank">Google Scholar</a> | 
-                    <a href="https://orcid.org/0000-0002-5517-2585" target="_blank">ORCID</a> | 
-                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57223285018" target="_blank">Scopus</a> | 
-                    <a href="https://www.researchgate.net/profile/Arega-Abate" target="_blank">ResearchGate</a>
-                </p>
+                <div>
+                    <p><strong>E-mail:</strong> <a href="mailto:ageab@dtu.dk">ageab@dtu.dk</a></p>
+                    <p><strong>Phone:</strong> +45 71786151</p>
+                    <p>Technical University of Denmark, Elektrovej, Building 325, room 142, Kgs. Lyngby 2800, Denmark</p>
+                    <p><strong>Links:</strong> 
+                        <a href="https://www.linkedin.com/in/arega-getaneh/" target="_blank">LinkedIn</a> | 
+                        <a href="https://x.com/agayh21" target="_blank">Twitter</a> | 
+                        <a href="https://orbit.dtu.dk/en/persons/arega-getaneh-abate" target="_blank">DTU Webpage</a> | 
+                        <a href="https://scholar.google.com/citations?hl=en&user=9Unlup4AAAAJ" target="_blank">Google Scholar</a> | 
+                        <a href="https://orcid.org/0000-0002-5517-2585" target="_blank">ORCID</a> | 
+                        <a href="https://www.scopus.com/authid/detail.uri?authorId=57223285018" target="_blank">Scopus</a> | 
+                        <a href="https://www.researchgate.net/profile/Arega-Abate" target="_blank">ResearchGate</a>
+                    </p>
+                </div>
             </div>
             <div class="main-content home-text">
                 <p><em>I am a Postdoctoral Researcher in AI-assisted electricity market design for sustainability at Technical University of Denmark (DTU) and a recipient of EuroTechPostdoc2 programme fellowship. I am using both optimization and machine learning (Online and Reinforcement Learning) techniques for electricity market problems.</em></p>
