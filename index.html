@@ -82,10 +82,6 @@
     <header>
         <h1>Arega Abate</h1>
         <p>Welcome to my personal webpage</p>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search...">
-            <button onclick="search()">Search</button>
-        </div>
     </header>
     <nav>
         <a onclick="showSection('home')">Home</a>
@@ -176,19 +172,6 @@
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
-        }
-
-        function search() {
-            const searchTerm = document.getElementById('search-input').value.toLowerCase();
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const textContent = section.textContent.toLowerCase();
-                if (textContent.includes(searchTerm)) {
-                    section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
-                }
-            });
         }
     </script>
 </body>
