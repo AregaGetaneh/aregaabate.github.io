@@ -43,10 +43,9 @@
             display: block;
         }
         .content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
             text-align: left;
-            overflow: hidden; /* Added to clear floats */
         }
         footer {
             background-color: #001f3f;
@@ -68,12 +67,21 @@
             width: 70%;
             padding: 20px;
         }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Arega Abate</h1>
         <p>Welcome to my personal webpage</p>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button onclick="search()">Search</button>
+        </div>
     </header>
     <nav>
         <a onclick="showSection('home')">Home</a>
@@ -82,9 +90,11 @@
         <a onclick="showSection('research')">Research Interests</a>
     </nav>
     <section id="home" class="active">
-        <div class="content">
+        <div class="content clearfix">
             <div class="contact-info">
                 <img src="https://raw.githubusercontent.com/AregaGetaneh/aregaabate.github.io/main/Arega_photo.jpg" alt="Arega Abate's Photo">
+            </div>
+            <div class="main-content">
                 <p>Email: <a href="mailto:ageab@dtu.dk">ageab@dtu.dk</a></p>
                 <p>Phone: +45 71786151</p>
                 <p>Technical University of Denmark, Elektrovej, Building 325, room 142, Kgs. Lyngby 2800, Denmark</p>
@@ -98,6 +108,7 @@
                     <a href="https://www.researchgate.net/profile/Arega-Abate" target="_blank">ResearchGate</a>
                 </p>
             </div>
+            <div class="clearfix"></div>
             <div class="main-content">
                 <h2>Home</h2>
                 <p>I am a Postdoctoral Researcher in AI-assisted electricity market design for sustainability at Technical University of Denmark (DTU) and a recipient of EuroTechPostdoc2 programme fellowship. I am using both optimization and machine learning (Online and Reinforcement Learning) techniques for electricity market problems.</p>
@@ -158,6 +169,19 @@
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
+        }
+
+        function search() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const textContent = section.textContent.toLowerCase();
+                if (textContent.includes(searchTerm)) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
         }
     </script>
 </body>
