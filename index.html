@@ -7,14 +7,15 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #001f3f;
-            color: white;
+            background-color: #ffffff;
+            color: #001f3f;
             margin: 0;
             padding: 0;
         }
         header {
             background-color: #001f3f;
-            padding: 1em;
+            color: white;
+            padding: 2em 1em;
             text-align: center;
         }
         nav {
@@ -36,8 +37,14 @@
             padding: 2em;
             text-align: center;
         }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
         footer {
             background-color: #001f3f;
+            color: white;
             padding: 1em;
             text-align: center;
         }
@@ -45,7 +52,7 @@
 </head>
 <body>
     <header>
-        <h1>Are Gaabate</h1>
+        <h1>Arega Abate</h1>
         <p>Welcome to my personal webpage</p>
     </header>
     <nav>
@@ -55,25 +62,30 @@
         <a href="#research">Research Interests</a>
     </nav>
     <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to my personal webpage. 
-            I am a postdoctoral Researcher in AI-assisted electricity market design for sustainability at Technical University of Denmark (DTU) and a recipient of EuroTechPostdoc2 programme fellowship. I am using both optimization and machine learning (Online and Reinforcement Learning) techniques for electricity market problems.
-
-I was a postdoctoral Research Fellow in Algorithmic trading in energy markets with market microstructure methods at Scuola Normale Superiore di Pisa (Italy). 
-
-I received my Ph.D. in Mathematical Methods of Economics, Finance, and Actuarial Sciences, from Brescia University (2021). During my PhD, I had one and half years visiting period at Universidad Carlos III de Madrid (uc3m) in Spain.  research interests.</p>
+        <div class="content">
+            <h2>Home</h2>
+            <p>Welcome to my personal webpage. I am a postdoctoral Researcher in AI-assisted electricity market design for sustainability at Technical University of Denmark (DTU) and a recipient of EuroTechPostdoc2 programme fellowship. I am using both optimization and machine learning (Online and Reinforcement Learning) techniques for electricity market problems.</p>
+            <p>I was a postdoctoral Research Fellow in Algorithmic trading in energy markets with market microstructure methods at Scuola Normale Superiore di Pisa (Italy).</p>
+            <p>I received my Ph.D. in Mathematical Methods of Economics, Finance, and Actuarial Sciences, from Brescia University (2021). During my PhD, I had one and half years visiting period at Universidad Carlos III de Madrid (uc3m) in Spain.</p>
+        </div>
     </section>
     <section id="publications">
-        <h2>Publications</h2>
-        <p>List your publications here...</p>
+        <div class="content">
+            <h2>Publications</h2>
+            <p>List your publications here...</p>
+        </div>
     </section>
     <section id="supervisions">
-        <h2>Supervisions</h2>
-        <p>Details about your supervisions...</p>
+        <div class="content">
+            <h2>Supervisions</h2>
+            <p>Details about your supervisions...</p>
+        </div>
     </section>
     <section id="research">
-        <h2>Research Interests</h2>
-        <p>Describe your research interests...</p>
+        <div class="content">
+            <h2>Research Interests</h2>
+            <p>Describe your research interests...</p>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Arega Abate</p>
